@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { FiMap, FiClipboard, FiFileText, FiBarChart2, FiCpu, FiUsers, FiFolder } from 'react-icons/fi';
 
 // Simple wrapper to fix TypeScript issues with React Icons
-const IconWrapper: React.FC<{ children: React.ReactElement }> = ({ children }) => {
+const IconWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return <div className="flex items-center justify-center">{children}</div>;
 };
 
