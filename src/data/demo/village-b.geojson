@@ -1,0 +1,121 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "boundary-b",
+        "name": "Village B Boundary",
+        "type": "administrative_boundary"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [78.55, 17.22],
+          [78.56, 17.215],
+          [78.57, 17.22],
+          [78.565, 17.23],
+          [78.555, 17.235],
+          [78.55, 17.22]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "patta-003",
+        "name": "Patta 003",
+        "holder_name": "Community Council",
+        "holder_type": "community",
+        "status": "granted",
+        "claimed_date": "2022-11-05",
+        "granted_date": "2023-02-18",
+        "related_docs": ["doc-3.pdf", "map-2.shp"]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [78.552, 17.222],
+          [78.562, 17.221],
+          [78.568, 17.225],
+          [78.565, 17.232],
+          [78.558, 17.235],
+          [78.552, 17.229],
+          [78.552, 17.222]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "forest-001",
+        "name": "Deciduous Forest",
+        "forest_id": "forest-b",
+        "canopy_pct": 78,
+        "species_summary": "Teak, Bamboo, Neem"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [78.555, 17.225],
+          [78.560, 17.223],
+          [78.565, 17.226],
+          [78.563, 17.232],
+          [78.558, 17.234],
+          [78.554, 17.230],
+          [78.555, 17.225]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "stream-001",
+        "name": "Seasonal Stream",
+        "stream_id": "stream-b",
+        "perennial_boolean": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [78.552, 17.228],
+          [78.556, 17.230],
+          [78.560, 17.232],
+          [78.564, 17.236]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "road-001",
+        "name": "Village Road",
+        "road_id": "road-b",
+        "class": "village"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [78.555, 17.222],
+          [78.554, 17.228],
+          [78.555, 17.234],
+          [78.556, 17.238]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "homestead-001",
+        "name": "Homestead 1",
+        "hh_id": "hh-001",
+        "household_count": 5,
+        "sanitation_status": "improved"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [78.558, 17.230]
+      }
+    }
+  ]
+}

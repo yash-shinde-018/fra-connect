@@ -1,0 +1,131 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "boundary-a",
+        "name": "Village A Boundary",
+        "type": "administrative_boundary"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [78.45, 17.12],
+          [78.46, 17.115],
+          [78.47, 17.12],
+          [78.465, 17.13],
+          [78.455, 17.135],
+          [78.45, 17.12]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "patta-001",
+        "name": "Patta 001",
+        "holder_name": "Ram Prasad",
+        "holder_type": "individual",
+        "status": "granted",
+        "claimed_date": "2023-01-15",
+        "granted_date": "2023-03-22",
+        "related_docs": ["doc-1.pdf", "map-1.shp"]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [78.452, 17.122],
+          [78.456, 17.121],
+          [78.458, 17.124],
+          [78.456, 17.127],
+          [78.453, 17.126],
+          [78.452, 17.122]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "patta-002",
+        "name": "Patta 002",
+        "holder_name": "Sita Devi",
+        "holder_type": "individual",
+        "status": "pending",
+        "claimed_date": "2023-02-10",
+        "granted_date": null,
+        "related_docs": ["doc-2.pdf"]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [78.462, 17.132],
+          [78.466, 17.131],
+          [78.468, 17.134],
+          [78.465, 17.137],
+          [78.463, 17.136],
+          [78.462, 17.132]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "farm-001",
+        "name": "Farm Plot A",
+        "land_id": "farm-a",
+        "owner_patta": "patta-001",
+        "area_ha": 2.3,
+        "crop_type": "rice",
+        "ndvi": 0.75,
+        "irrigation": "borewell"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [78.453, 17.123],
+          [78.455, 17.122],
+          [78.457, 17.124],
+          [78.456, 17.126],
+          [78.454, 17.125],
+          [78.453, 17.123]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "pond-001",
+        "name": "Community Pond",
+        "pond_id": "pond-a",
+        "avg_depth_m": 3.2,
+        "area_ha": 0.5,
+        "water_index": 0.85
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [78.463, 17.133],
+          [78.464, 17.132],
+          [78.465, 17.133],
+          [78.464, 17.134],
+          [78.463, 17.133]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "well-001",
+        "name": "Borewell #123",
+        "well_id": "well-123",
+        "depth_m": 45,
+        "last_repaired_date": "2022-11-15"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [78.455, 17.125]
+      }
+    }
+  ]
+}

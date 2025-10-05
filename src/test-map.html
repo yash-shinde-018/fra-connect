@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Map Test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet">
+    <script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
+    <style>
+        body { margin: 0; padding: 0; }
+        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+        // Initialize map
+        const map = new maplibregl.Map({
+            container: 'map',
+            style: 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json',
+            center: [78.46, 17.13],
+            zoom: 12
+        });
+
+        // Add navigation controls
+        map.addControl(new maplibregl.NavigationControl(), 'top-right');
+
+        // Sample data for testing
+        const sampleData = {
+            "type": "FeatureCollection",
+            "features": [
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "id": "boundary-a",
+                        "name": "Village A Boundary",
+                        "type": "administrative_boundary"
+                    },
+                    "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [[
+                            [78.45, 17.12],
+                            [78.47, 17.12],
+                            [78.47, 17.14],
+                            [78.45, 17.14],
+                            [78.45, 17.12]
+                        ]]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "id": "patta-001",
+                        "name": "Patta 001",
+                        "holder_name": "Ram Prasad",
+                        "holder_type": "individual",
+                        "status": "granted"
+                    },
+                    "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [[
+                            [78.452, 17.122],
+                            [78.458, 17.122],
+                            [78.458, 17.128],
+                            [78.452, 17.128],
+                            [78.452, 17.122]
+                        ]]
+                    }
+                }
+            ]
+        };
+
+        map.on('load', function () {
+            // Add source
+            map.addSource('sample-data', {
+                type: 'geojson',
+                data: sampleData
+            });
+
+            // Add layers
+            map.addLayer({
+                id: 'boundaries',
+                type: 'line',
+                source: 'sample-data',
+                filter: ['==', 'type', 'administrative_boundary'],
+                paint: {
+                    'line-color': '#3b82f6',
+                    'line-width': 3,
+                    'line-dasharray': [2, 2]
+                }
+            });
+
+            map.addLayer({
+                id: 'pattas',
+                type: 'fill',
+                source: 'sample-data',
+                filter: ['==', 'holder_type', 'individual'],
+                paint: {
+                    'fill-color': '#10b981',
+                    'fill-opacity': 0.5,
+                    'fill-outline-color': '#047857'
+                }
+            });
+        });
+    </script>
+</body>
+</html>
